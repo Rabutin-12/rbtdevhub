@@ -12,11 +12,22 @@ const categories: ("Tous" | ProjectCategory)[] = [
   "Solutions digitales",
 ];
 
+const ITEMS_PER_PAGE = 6;
+
 export default function Portfolio() {
   const [active, setActive] = useState<(typeof categories)[number]>("Tous");
+  const [page, setPage] = useState(1);
 
-  const visible =
+  const filtered =
     active === "Tous" ? projects : projects.filter((p) => p.category === active);
+
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+  const visible = filtered.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+
+  const handleCategoryChange = (cat: (typeof categories)[number]) => {
+    setActive(cat);
+    setPage(1);
+  };
 
   return (
     <section id="portfolio" className="scroll-mt-24 py-24">
@@ -32,7 +43,7 @@ export default function Portfolio() {
             <button
               key={cat}
               type="button"
-              onClick={() => setActive(cat)}
+              onClick={() => handleCategoryChange(cat)}
               aria-pressed={active === cat}
               className={`rounded-full border px-4 py-2 text-sm transition-all ${
                 active === cat
@@ -83,6 +94,44 @@ export default function Portfolio() {
             </Reveal>
           ))}
         </div>
+
+        {totalPages > 1 && (
+          <Reveal className="mt-10 flex justify-center gap-2">
+            <button
+              type="button"
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              disabled={page === 1}
+              className="rounded-full border border-line px-4 py-2 text-sm text-muted transition-colors hover:border-gold-light/50 hover:text-paper disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Précédent
+            </button>
+
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+              <button
+                key={n}
+                type="button"
+                onClick={() => setPage(n)}
+                aria-current={page === n ? "page" : undefined}
+                className={`h-9 w-9 rounded-full text-sm font-medium transition-colors ${
+                  page === n
+                    ? "bg-gold text-ink shadow-glow"
+                    : "border border-line text-muted hover:border-gold-light/50 hover:text-paper"
+                }`}
+              >
+                {n}
+              </button>
+            ))}
+
+            <button
+              type="button"
+              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              disabled={page === totalPages}
+              className="rounded-full border border-line px-4 py-2 text-sm text-muted transition-colors hover:border-gold-light/50 hover:text-paper disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Suivant
+            </button>
+          </Reveal>
+        )}
       </div>
     </section>
   );

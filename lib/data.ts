@@ -47,6 +47,24 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Head and Neck Journal of Madagascar",
+    description:
+      "Le Head and Neck Journal of Madagascar publie des travaux de recherche clinique et fondamentale en neurochirurgie, ORL, ophtalmologie, chirurgie maxillo-faciale et stomatologie. Il est destiné aux professionnels de santé et aux chercheurs.",
+    category: "Sites web professionnels",
+    technologies: ["Laravel", "Javascript", "Bootstrap"],
+    gradient: "from-gold/40 via-navy-2 to-ink",
+    code: "export const site = build('vitrine')",
+  },
+  {
+    name: "Des sites web ministériels",
+    description:
+      "Conception et mise en production de plateformes web utilisées quotidiennement par les services du ministère de l'Enseignement Technique et de la Formation Professionnelle pour la gestion des activités administratives et pédagogiques.",
+    category: "Applications web",
+    technologies: ["Laravel", "Javascript", "Bootstrap"],
+    gradient: "from-gold/40 via-navy-2 to-ink",
+    code: "export const site = build('vitrine')",
+  },
+  {
     name: "Vitrine Atelier Karibu",
     description:
       "Site vitrine premium pour un cabinet de conseil : présentation des services, blog et prise de rendez-vous en ligne.",
