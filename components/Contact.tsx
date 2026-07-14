@@ -37,7 +37,7 @@ export default function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title="Parlons de votre projet"
-          description="Une question, une idée, un besoin urgent ? Écrivez-moi par le canal de votre choix."
+          description="Une question, une idée, un besoin urgent ? Écrivez-moi par le canal de votre choixUne question, une idée ou un projet à discuter ? Échangeons simplement via le canal qui vous convient."
         />
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1.2fr]">
