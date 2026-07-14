@@ -41,10 +41,10 @@ public/             → Images et ressources statiques
 
 1. **Coordonnées** : modifiez `lib/data.ts` (email, numéro WhatsApp, réseaux sociaux).
 2. **Projets du portfolio** : remplacez les exemples dans `lib/data.ts` par vos vraies réalisations (vous pouvez remplacer les aperçus en dégradé par des captures d'écran via `next/image`).
-3. **Envoi d'email des devis** : branchez un service (Resend, SendGrid, Nodemailer...) dans `app/api/quote/route.ts` — l'emplacement est déjà préparé.
-   - Tant que le domaine `rbtdevhub.com` n'est pas vérifié dans Resend, les emails partent depuis l'adresse sandbox `onboarding@resend.dev`.
-   - Une fois le domaine vérifié ([resend.com/domains](https://resend.com/domains)), renseignez `RESEND_FROM_EMAIL` (ex. `Rbt Dev Hub <contact@rbtdevhub.com>`) et `CONTACT_TO_EMAIL` dans `.env.local` (voir les lignes commentées) pour basculer en production.
-4. **Nom de domaine** : mettez à jour `metadataBase` dans `app/layout.tsx`.
+3. **Envoi d'email des devis** : géré via Resend (`lib/sendMail.ts`), branché dans `app/api/quote/route.ts` et `app/api/contact/route.ts`.
+   - Sans nom de domaine, les emails partent depuis l'adresse sandbox `onboarding@resend.dev` — c'est volontaire et sans limitation ici, car les notifications sont toujours envoyées vers votre propre adresse (`CONTACT_TO_EMAIL`), ce qui correspond à la restriction du mode sandbox Resend (envoi uniquement vers l'adresse du compte).
+   - Si vous achetez un domaine plus tard, vérifiez-le dans [resend.com/domains](https://resend.com/domains) puis renseignez `RESEND_FROM_EMAIL` et `CONTACT_TO_EMAIL` dans `.env.local` (voir les lignes commentées) pour envoyer depuis une adresse @votredomaine.
+4. **Nom de domaine** : le site n'en utilise pas actuellement (`metadataBase` est commenté dans `app/layout.tsx`). Si vous en achetez un, décommentez-le et mettez à jour l'URL.
 
 ## Identité visuelle
 
