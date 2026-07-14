@@ -33,7 +33,7 @@ export default function About() {
         <SectionHeading
           eyebrow="À propos"
           title="Un développeur, une exigence : votre réussite"
-          description="Je suis développeur logiciel indépendant, spécialisé dans la création de produits numériques qui font grandir votre activité."
+          description="Développeur logiciel indépendant — création de produits numériques sur mesure pour faire évoluer votre activité."
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">
