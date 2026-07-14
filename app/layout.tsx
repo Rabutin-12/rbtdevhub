@@ -22,7 +22,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rbtdevhub.com"),
+  // metadataBase: new URL("https://rbtdevhub.com"),
   title: {
     default: "Rbt Dev Hub — Votre idée, notre code, votre succès",
     template: "%s | Rbt Dev Hub",
