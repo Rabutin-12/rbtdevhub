@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -71,6 +72,7 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} ${mono.variable}`}
     >
       <body>{children}</body>
+      <GoogleAnalytics gaId="G-6VZNPTCH9K" />
     </html>
   );
 }
