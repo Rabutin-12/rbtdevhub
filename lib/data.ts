@@ -60,7 +60,7 @@ export const projects: Project[] = [
     description:
       "Conception et mise en production de plateformes web utilisées quotidiennement par les services du ministère de l'Enseignement Technique et de la Formation Professionnelle pour la gestion des activités administratives et pédagogiques.",
     category: "Applications web",
-    technologies: ["Laravel", "Javascript", "Bootstrap"],
+    technologies: ["Laravel", "Symfony", "CodeIgniter", "Next.js", "Javascript", "Bootstrap"],
     gradient: "from-gold/40 via-navy-2 to-ink",
     code: "export const site = build('vitrine')",
   },
