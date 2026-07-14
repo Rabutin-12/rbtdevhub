@@ -23,7 +23,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://rbtdevhub.com"),
   title: {
-    default: "Rbt Dev Hub — Votre idée, mon code, votre succès",
+    default: "Rbt Dev Hub — Votre idée, notre code, votre succès",
     template: "%s | Rbt Dev Hub",
   },
   description:
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Rbt Dev Hub — Développement web & solutions digitales",
     description:
-      "Votre idée, mon code, votre succès. Sites web professionnels, applications web et solutions digitales sur mesure.",
+      "Votre idée, notre code, votre succès. Sites web professionnels, applications web et solutions digitales sur mesure.",
     type: "website",
     locale: "fr_FR",
     siteName: "Rbt Dev Hub",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         url: "/couverture.png",
         width: 924,
         height: 308,
-        alt: "Rbt Dev Hub — votre idée, mon code, votre succès",
+        alt: "Rbt Dev Hub — votre idée, notre code, votre succès",
       },
     ],
   },
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rbt Dev Hub — Développement web & solutions digitales",
     description:
-      "Votre idée, mon code, votre succès. Demandez votre devis gratuit.",
+      "Votre idée, notre code, votre succès. Demandez votre devis gratuit.",
     images: ["/couverture.png"],
   },
   robots: { index: true, follow: true },

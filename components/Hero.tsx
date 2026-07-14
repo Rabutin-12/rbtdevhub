@@ -6,7 +6,7 @@ const codeLines = [
   "const idee = client.vision;",
   "const code = rbtDevHub.develop(idee);",
   "const succes = deploy(code);",
-  "// Votre idée, mon code, votre succès ✓",
+  "// Votre idée, notre code, votre succès ✓",
 ];
 
 export default function Hero() {
@@ -14,7 +14,9 @@ export default function Hero() {
   const [done, setDone] = useState(false);
 
   useEffect(() => {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     if (reduceMotion) {
       setTyped(codeLines);
       setDone(true);
@@ -58,8 +60,12 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-[1.1fr_1fr]">
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-line bg-navy/60 px-4 py-1.5 font-mono text-xs text-gold-light animate-rise">
-            <span className="h-1.5 w-1.5 rounded-full bg-gold-light" aria-hidden="true" />
-            {"//"} votre idée <span aria-hidden="true">→</span> mon code <span aria-hidden="true">→</span> votre succès
+            <span
+              className="h-1.5 w-1.5 rounded-full bg-gold-light"
+              aria-hidden="true"
+            />
+            {"//"} votre idée <span aria-hidden="true">→</span> notre code{" "}
+            <span aria-hidden="true">→</span> votre succès
           </p>
 
           <h1
@@ -68,7 +74,7 @@ export default function Hero() {
           >
             Votre idée, <br />
             <span className="bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">
-              mon code,
+              notre code,
             </span>{" "}
             <br />
             votre succès.
@@ -78,10 +84,9 @@ export default function Hero() {
             className="mt-6 max-w-xl text-lg text-muted animate-rise"
             style={{ animationDelay: "240ms" }}
           >
-            J&apos;accompagne les entreprises, entrepreneurs et
-            organisations dans leur transformation numérique : sites web
-            professionnels, applications web et solutions digitales conçues
-            sur mesure.
+            J&apos;accompagne les entreprises, entrepreneurs et organisations
+            dans leur transformation numérique : sites web professionnels,
+            applications web et solutions digitales conçues sur mesure.
           </p>
 
           <div
@@ -116,8 +121,12 @@ export default function Hero() {
             <pre className="min-h-[10.5rem] overflow-x-auto p-5 font-mono text-sm leading-7 text-paper/90">
               {typed.map((lineText, i) => (
                 <div key={i}>
-                  <span className="mr-4 select-none text-muted/50">{i + 1}</span>
-                  <span className={lineText.startsWith("//") ? "text-gold" : ""}>
+                  <span className="mr-4 select-none text-muted/50">
+                    {i + 1}
+                  </span>
+                  <span
+                    className={lineText.startsWith("//") ? "text-gold" : ""}
+                  >
                     {lineText}
                   </span>
                   {i === typed.length - 1 && (

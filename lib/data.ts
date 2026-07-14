@@ -127,7 +127,7 @@ export const contactInfo = {
   socials: [
     { name: "LinkedIn", href: "https://www.linkedin.com/in/ernesto-rabutin-a58611323/" },
     { name: "GitHub", href: "https://github.com/rbt-dev-hub" },
-    { name: "X / Twitter", href: "https://x.com/rbtdevhub" },
+    { name: "WhatsApp", href: "https://wa.me/261341258492" },
     { name: "Facebook", href: "https://facebook.com/rbtdevhub" },
   ],
 };

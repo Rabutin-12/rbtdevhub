@@ -41,9 +41,8 @@ export default function Footer() {
             </span>
           </p>
           <p className="mt-4 max-w-sm text-sm text-muted">
-            Votre idée, mon code, votre succès. Développement web et
-            solutions digitales pour entreprises, entrepreneurs et
-            organisations.
+            Votre idée, notre code, votre succès. Développement web et solutions
+            digitales pour entreprises, entrepreneurs et organisations.
           </p>
           <ul className="mt-5 flex flex-wrap gap-2.5">
             {contactInfo.socials.map((social) => (
@@ -85,7 +84,7 @@ export default function Footer() {
       <div className="border-t border-line/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-5 py-5 text-xs text-muted sm:flex-row">
           <p>© {new Date().getFullYear()} Rbt Dev Hub. Tous droits réservés.</p>
-          <p className="font-mono">Votre idée, mon code, votre succès.</p>
+          <p className="font-mono">Votre idée, notre code, votre succès.</p>
         </div>
       </div>
     </footer>
