@@ -34,8 +34,8 @@ export default function Portfolio() {
       <div className="mx-auto max-w-6xl px-5">
         <SectionHeading
           eyebrow="Portfolio"
-          title="Des projets qui parlent pour nous"
-          description="Un aperçu du type de réalisations que nous livrons à nos clients."
+          title="Des projets qui parlent pour moi"
+          description="Un aperçu du type de réalisations que je livre à mes clients."
         />
 
         <Reveal className="mt-10 flex flex-wrap justify-center gap-2.5">

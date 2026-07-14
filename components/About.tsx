@@ -23,7 +23,7 @@ const pillars = [
 const values = [
   { label: "Qualité du code", detail: "revue, testé, documenté" },
   { label: "Créativité", detail: "des interfaces qui vous ressemblent" },
-  { label: "Satisfaction client", detail: "notre mesure de réussite" },
+  { label: "Satisfaction client", detail: "ma mesure de réussite" },
 ];
 
 export default function About() {
@@ -32,8 +32,8 @@ export default function About() {
       <div className="mx-auto max-w-6xl px-5">
         <SectionHeading
           eyebrow="À propos"
-          title="Une équipe, une exigence : votre réussite"
-          description="Rbt Dev Hub est une entreprise de développement logiciel spécialisée dans la création de produits numériques qui font grandir votre activité."
+          title="Un développeur, une exigence : votre réussite"
+          description="Je suis développeur logiciel indépendant, spécialisé dans la création de produits numériques qui font grandir votre activité."
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-2">

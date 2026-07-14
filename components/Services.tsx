@@ -56,7 +56,7 @@ export default function Services() {
       <div className="mx-auto max-w-6xl px-5">
         <SectionHeading
           eyebrow="Services"
-          title="Ce que nous construisons pour vous"
+          title="Ce que je construis pour vous"
           description="Quatre expertises complémentaires pour transformer vos idées en produits numériques performants."
         />
 

@@ -6,7 +6,7 @@ const codeLines = [
   "const idee = client.vision;",
   "const code = rbtDevHub.develop(idee);",
   "const succes = deploy(code);",
-  "// Votre idée, notre code, votre succès ✓",
+  "// Votre idée, mon code, votre succès ✓",
 ];
 
 export default function Hero() {
@@ -59,7 +59,7 @@ export default function Hero() {
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-line bg-navy/60 px-4 py-1.5 font-mono text-xs text-gold-light animate-rise">
             <span className="h-1.5 w-1.5 rounded-full bg-gold-light" aria-hidden="true" />
-            {"//"} votre idée <span aria-hidden="true">→</span> notre code <span aria-hidden="true">→</span> votre succès
+            {"//"} votre idée <span aria-hidden="true">→</span> mon code <span aria-hidden="true">→</span> votre succès
           </p>
 
           <h1
@@ -68,7 +68,7 @@ export default function Hero() {
           >
             Votre idée, <br />
             <span className="bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">
-              notre code,
+              mon code,
             </span>{" "}
             <br />
             votre succès.
@@ -78,7 +78,7 @@ export default function Hero() {
             className="mt-6 max-w-xl text-lg text-muted animate-rise"
             style={{ animationDelay: "240ms" }}
           >
-            Rbt Dev Hub accompagne les entreprises, entrepreneurs et
+            J&apos;accompagne les entreprises, entrepreneurs et
             organisations dans leur transformation numérique : sites web
             professionnels, applications web et solutions digitales conçues
             sur mesure.

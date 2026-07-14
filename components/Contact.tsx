@@ -37,7 +37,7 @@ export default function Contact() {
         <SectionHeading
           eyebrow="Contact"
           title="Parlons de votre projet"
-          description="Une question, une idée, un besoin urgent ? Écrivez-nous par le canal de votre choix."
+          description="Une question, une idée, un besoin urgent ? Écrivez-moi par le canal de votre choix."
         />
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1.2fr]">
@@ -105,7 +105,7 @@ export default function Contact() {
                     Message envoyé
                   </h3>
                   <p className="mt-2 text-sm text-muted">
-                    Merci ! Nous vous répondrons dans les plus brefs délais.
+                    Merci ! Je vous répondrai dans les plus brefs délais.
                   </p>
                   <button
                     type="button"
@@ -155,7 +155,7 @@ export default function Contact() {
                       rows={5}
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      placeholder="Comment pouvons-nous vous aider ?"
+                      placeholder="Comment puis-je vous aider ?"
                       className={inputClass}
                     />
                   </div>

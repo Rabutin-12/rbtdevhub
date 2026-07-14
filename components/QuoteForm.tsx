@@ -79,7 +79,7 @@ export default function QuoteForm() {
         <SectionHeading
           eyebrow="Devis gratuit"
           title="Obtenez votre devis gratuit"
-          description="Décrivez votre projet en quelques lignes : nous revenons vers vous sous 48 h avec une proposition personnalisée, sans engagement."
+          description="Décrivez votre projet en quelques lignes : je reviens vers vous sous 48 h avec une proposition personnalisée, sans engagement."
         />
 
         <Reveal className="mt-12">
@@ -97,8 +97,8 @@ export default function QuoteForm() {
                 Demande envoyée avec succès
               </h3>
               <p className="mx-auto mt-3 max-w-md text-sm text-muted">
-                Merci pour votre confiance. Notre équipe étudie votre projet et
-                vous répondra sous 48 heures avec une proposition personnalisée.
+                Merci pour votre confiance. J&apos;étudie votre projet et
+                vous répondrai sous 48 heures avec une proposition personnalisée.
               </p>
               <button
                 type="button"
