@@ -1,17 +1,13 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
+import { guardFormRequest } from "@/lib/formGuard";
+import { sendMail } from "@/lib/sendMail";
 
 export async function POST(request: Request) {
   try {
-    const apiKey = process.env.RESEND_API_KEY;
-
-    if (!apiKey) {
-      throw new Error("RESEND_API_KEY is not defined");
-    }
-
-    const resend = new Resend(apiKey);
-
     const data = await request.json();
+
+    const guardResponse = guardFormRequest(request, data);
+    if (guardResponse) return guardResponse;
 
     if (!data.name || !data.email || !data.message) {
       return NextResponse.json(
@@ -20,9 +16,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const { error } = await resend.emails.send({
-      from: "Rbt Dev Hub <onboarding@resend.dev>",
-      to: "ernestorabutin02@gmail.com",
+    const { error } = await sendMail({
       replyTo: data.email,
       subject: `Nouveau message de contact — ${data.name}`,
       text: [

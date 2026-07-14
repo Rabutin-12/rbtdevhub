@@ -9,7 +9,7 @@ const inputClass =
   "w-full rounded-lg border border-line bg-ink/70 px-4 py-3 text-sm text-paper placeholder:text-muted/60 transition-colors focus:border-gold";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", message: "", website: "" });
   const [sent, setSent] = useState(false);
   const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
 
@@ -24,7 +24,7 @@ export default function Contact() {
       });
       if (!res.ok) throw new Error();
       setSent(true);
-      setForm({ name: "", email: "", message: "" });
+      setForm({ name: "", email: "", message: "", website: "" });
       setStatus("idle");
     } catch {
       setStatus("error");
@@ -98,7 +98,7 @@ export default function Contact() {
 
           {/* Formulaire de contact */}
           <Reveal delay={120}>
-            <div className="rounded-xl border border-line bg-navy/50 p-6 sm:p-8">
+            <div className="relative rounded-xl border border-line bg-navy/50 p-6 sm:p-8">
               {sent ? (
                 <div role="status" className="py-10 text-center">
                   <h3 className="font-display text-xl font-semibold text-gold-light">
@@ -117,6 +117,16 @@ export default function Contact() {
                 </div>
               ) : (
                 <div className="grid gap-5">
+                  <input
+                    type="text"
+                    name="website"
+                    value={form.website}
+                    onChange={(e) => setForm({ ...form, website: e.target.value })}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="absolute left-[-9999px] h-0 w-0 opacity-0"
+                  />
                   <div className="grid gap-5 sm:grid-cols-2">
                     <div>
                       <label htmlFor="contact-name" className="mb-1.5 block text-sm font-medium">

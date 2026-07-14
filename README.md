@@ -42,6 +42,8 @@ public/             → Images et ressources statiques
 1. **Coordonnées** : modifiez `lib/data.ts` (email, numéro WhatsApp, réseaux sociaux).
 2. **Projets du portfolio** : remplacez les exemples dans `lib/data.ts` par vos vraies réalisations (vous pouvez remplacer les aperçus en dégradé par des captures d'écran via `next/image`).
 3. **Envoi d'email des devis** : branchez un service (Resend, SendGrid, Nodemailer...) dans `app/api/quote/route.ts` — l'emplacement est déjà préparé.
+   - Tant que le domaine `rbtdevhub.com` n'est pas vérifié dans Resend, les emails partent depuis l'adresse sandbox `onboarding@resend.dev`.
+   - Une fois le domaine vérifié ([resend.com/domains](https://resend.com/domains)), renseignez `RESEND_FROM_EMAIL` (ex. `Rbt Dev Hub <contact@rbtdevhub.com>`) et `CONTACT_TO_EMAIL` dans `.env.local` (voir les lignes commentées) pour basculer en production.
 4. **Nom de domaine** : mettez à jour `metadataBase` dans `app/layout.tsx`.
 
 ## Identité visuelle

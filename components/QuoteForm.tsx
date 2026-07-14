@@ -12,6 +12,7 @@ type FormState = {
   projectType: string;
   budget: string;
   description: string;
+  website: string;
 };
 
 const initialState: FormState = {
@@ -22,6 +23,7 @@ const initialState: FormState = {
   projectType: "",
   budget: "",
   description: "",
+  website: "",
 };
 
 const projectTypes = [
@@ -109,7 +111,17 @@ export default function QuoteForm() {
               </button>
             </div>
           ) : (
-            <div className="rounded-xl border border-line bg-ink/60 p-6 sm:p-9">
+            <div className="relative rounded-xl border border-line bg-ink/60 p-6 sm:p-9">
+              <input
+                type="text"
+                name="website"
+                value={form.website}
+                onChange={handleChange}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="absolute left-[-9999px] h-0 w-0 opacity-0"
+              />
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <label htmlFor="fullName" className="mb-1.5 block text-sm font-medium">

@@ -1,11 +1,13 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { guardFormRequest } from "@/lib/formGuard";
+import { sendMail } from "@/lib/sendMail";
 
 export async function POST(request: Request) {
   try {
     const data = await request.json();
+
+    const guardResponse = guardFormRequest(request, data);
+    if (guardResponse) return guardResponse;
 
     if (!data.fullName || !data.email || !data.projectType || !data.description) {
       return NextResponse.json(
@@ -14,9 +16,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const { error } = await resend.emails.send({
-      from: "Rbt Dev Hub <onboarding@resend.dev>",
-      to: "ernestorabutin02@gmail.com",
+    const { error } = await sendMail({
       replyTo: data.email,
       subject: `Nouvelle demande de devis — ${data.fullName}`,
       text: [
