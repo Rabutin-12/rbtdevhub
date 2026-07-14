@@ -19,10 +19,15 @@ export default function Portfolio() {
   const [page, setPage] = useState(1);
 
   const filtered =
-    active === "Tous" ? projects : projects.filter((p) => p.category === active);
+    active === "Tous"
+      ? projects
+      : projects.filter((p) => p.category === active);
 
   const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
-  const visible = filtered.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
+  const visible = filtered.slice(
+    (page - 1) * ITEMS_PER_PAGE,
+    page * ITEMS_PER_PAGE,
+  );
 
   const handleCategoryChange = (cat: (typeof categories)[number]) => {
     setActive(cat);
@@ -35,7 +40,7 @@ export default function Portfolio() {
         <SectionHeading
           eyebrow="Portfolio"
           title="Des projets qui parlent pour moi"
-          description="Un aperçu du type de réalisations que je livre à mes clients."
+          description="Découvrez un aperçu des réalisations créées pour les clients."
         />
 
         <Reveal className="mt-10 flex flex-wrap justify-center gap-2.5">
