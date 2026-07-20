@@ -125,8 +125,8 @@ export const contactInfo = {
   whatsapp: "+261 34 12 584 92",
   whatsappLink: "https://wa.me/261341258492",
   socials: [
-    { name: "LinkedIn", href: "https://www.linkedin.com/in/ernesto-rabutin-a58611323/" },
-    { name: "GitHub", href: "https://github.com/rbt-dev-hub" },
+    // { name: "LinkedIn", href: "https://www.linkedin.com/in/ernesto-rabutin-a58611323/" },
+    // { name: "GitHub", href: "https://github.com/rbt-dev-hub" },
     { name: "WhatsApp", href: "https://wa.me/261341258492" },
     { name: "Facebook", href: "https://facebook.com/rbtdevhub" },
   ],
