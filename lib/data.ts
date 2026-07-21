@@ -109,15 +109,7 @@ export const projects: Project[] = [
     gradient: "from-gold/35 via-navy-2 to-ink",
     code: "invoice.generate({ auto: true })",
   },
-  {
-    name: "Assistant IA SupportBot",
-    description:
-      "Agent conversationnel intelligent branché sur la base de connaissances du client pour répondre 24h/24.",
-    category: "Solutions digitales",
-    technologies: ["IA générative", "Next.js", "API REST"],
-    gradient: "from-gold-light/30 via-navy-2 to-ink",
-    code: "ai.answer(question, context)",
-  },
+  
 ];
 
 export const contactInfo = {
