@@ -91,24 +91,6 @@ export const projects: Project[] = [
     gradient: "from-gold/30 via-navy-2 to-ink",
     code: "leave.approve(employeeId)",
   },
-  {
-    name: "Tableau de bord LogiTrack",
-    description:
-      "Suivi logistique en temps réel : cartographie des livraisons, alertes automatiques et rapports d'activité.",
-    category: "Applications web",
-    technologies: ["Next.js", "WebSocket", "Mapbox"],
-    gradient: "from-gold-light/25 via-navy to-ink",
-    code: "socket.on('delivery', update)",
-  },
-  {
-    name: "Automatisation FacturePro",
-    description:
-      "Solution digitale de facturation automatisée : génération de devis, relances intelligentes et export comptable.",
-    category: "Solutions digitales",
-    technologies: ["TypeScript", "Node.js", "PDFKit"],
-    gradient: "from-gold/35 via-navy-2 to-ink",
-    code: "invoice.generate({ auto: true })",
-  },
   
 ];
 
